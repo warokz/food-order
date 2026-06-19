@@ -1,4 +1,4 @@
-# Form Pemesanan Makanan WhatsApp + Admin v7
+# Form Pemesanan Makanan WhatsApp + Admin v9
 
 Versi ini sudah dibuat responsif untuk PC, tablet, dan HP dengan tampilan order food modern. Fitur utamanya:
 
@@ -9,9 +9,7 @@ Versi ini sudah dibuat responsif untuk PC, tablet, dan HP dengan tampilan order 
 - Jika pembayaran QRIS atau Transfer Bank, pelanggan diarahkan ke halaman `payment.html` terlebih dahulu.
 - Halaman pembayaran khusus berisi QRIS, rekening transfer, ringkasan pesanan, dan form upload bukti pembayaran.
 - Setelah pelanggan upload bukti, sistem membuka chat WhatsApp admin nomor `088211399973`.
-- Dashboard admin dengan login default:
-  - ID: `tunasrasa`
-  - Password: `kitapastibisa`
+- Dashboard admin dengan login.
 - Menu admin untuk mengganti password.
 - Menu admin untuk tambah item/menu, ubah harga, aktif/nonaktif menu, dan upload icon/foto menu sendiri.
 - Menu admin untuk mengatur QRIS, nomor rekening, nama toko, dan nomor WhatsApp admin.
@@ -140,9 +138,7 @@ Jika ingin bukti juga muncul sebagai lampiran langsung di WhatsApp, pelanggan da
 ## Mengganti Password Admin
 
 1. Buka `admin.html`.
-2. Login menggunakan:
-   - ID: `tunasrasa`
-   - Password: `kitapastibisa`
+2. Login menggunakan akun admin.
 3. Buka tab **Pengaturan Admin**.
 4. Isi ID admin, password lama, password baru, dan konfirmasi password.
 5. Klik **Simpan Password**.
@@ -154,3 +150,16 @@ Password ini tersimpan di browser admin. Jika dibuka dari perangkat lain, gunaka
 Agar aman masuk Google Sheets, sistem otomatis mengecilkan gambar icon, QRIS, dan bukti pembayaran. Gunakan gambar yang jelas tetapi tidak terlalu besar.
 
 Jika muncul pesan ukuran terlalu besar, gunakan screenshot atau foto yang lebih kecil.
+
+
+## Update v8
+- Tombol download struk sekarang menghasilkan file PDF (`.pdf`), bukan HTML.
+- Form login admin dibuat kosong tanpa placeholder ID/password default.
+- Tulisan default ID/password di halaman login dihapus agar tidak terlihat oleh pengunjung.
+- Catatan keamanan: setelah berhasil login, segera ganti ID/password melalui menu Pengaturan Admin. Untuk keamanan penuh pada hosting publik, gunakan proteksi tambahan dari server/auth karena template statis masih berjalan di sisi browser.
+
+
+## Update v9
+- Tombol/link **Admin** di halaman pelanggan (`index.html`) sudah dihapus.
+- Pelanggan tidak lagi melihat pintasan menuju dashboard admin dari halaman order.
+- Dashboard admin tetap dapat dibuka manual oleh pemilik melalui URL `admin.html`.
